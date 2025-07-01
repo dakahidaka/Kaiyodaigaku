@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>葛西海洋大学</title>
+  <link rel="stylesheet" href="bootstrap.css" />
+  <script src="bootstrap.js"></script>
+
+  <style>
+    /* ナビバーの初期スタイル（半透明） */
+    .navbar-transparent {
+      background-image: linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(0, 255, 255, 0.4));
+      backdrop-filter: blur(4px);
+      transition: background-color 0.4s ease;
+    }
+
+    /* スクロール後の濃い背景 */
+    .navbar-dark-scrolled {
+      background-color: rgba(33, 37, 41, 0.85) !important;
+      backdrop-filter: blur(5px);
+    }
+
+
+    /* メインビジュアル */
+    .main-visual-5 {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 600px;
+      padding: 0;
+      position: relative;
+      transition: background-image 1s ease-in-out;
+      color: white;
+      padding-top: 56px;
+    }
+
+    /* メインビジュアル内の文章配置 */
+    .main-visual-5 .container {
+      position: absolute;
+      top: 28.5rem;
+      left: 1rem;
+      max-width: 90%;
+      z-index: 2;
+    }
+
+    /* カード画像のクリッピング */
+    .img-clipping-1 {
+      clip-path: circle(42%);
+    }
+
+    /* 題目用の色 */
+    .text-darkblue {
+      color: #003366;
+    }
+
+    /* ニュースの日時のフォントサイズを小さく */
+    .news-date {
+      font-size: 0.85rem;
+      /* 通常の1remよりやや小さく */
+    }
+
+    /* 基本フォントサイズ */
+    .news-title {
+      font-size: 2.5rem;
+    }
+
+    .news-subtitle {
+      font-size: 1.25rem;
+    }
+
+    /* md 以上（768px〜）で拡大 */
+    @media (min-width: 768px) {
+      .news-title {
+        font-size: 3rem;
+      }
+
+      .news-subtitle {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ナビゲーションバー -->
+  <!-- <nav class="navbar navbar-expand-md navbar-dark bg-dark"> -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">巌戸台海洋大学</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./index.html">一つ目の項目</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">二つ目の項目</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">三つ目の項目</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">四つ目の項目</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- メインビジュアル -->
+  <div class="main-visual-5" id="mainVisual">
+    <div class="container">
+      <h1 class="display-3 text-decoration-underline">Main Visual</h1>
+      <h3 class="display-5">海を知り、未来を守る。</h3>
+    </div>
+  </div>
+
+  <!-- ニュースセクション -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- タイトル部分 -->
+      <div class="col-lg-3 col-md-3 mb-4 text-lg-start text-md-start text-center position-relative">
+        <h2 class="mb-2 text-darkblue news-title">News</h2>
+        <h6 class="text-darkblue news-subtitle">おしらせ</h6>
+
+        <a class="btn btn-outline-primary btn-md d-none d-md-inline position-absolute bottom-0 start-0 mb-2 ms-3"
+          href="https://www.google.com/" role="button">一覧をみる</a>
+      </div>
+
+      <!-- ニュース本体 -->
+      <div class="col-lg-9 col-md-9">
+        <div class="mb-4 p-3 border rounded shadow-sm bg-light">
+          <div>
+            <span class="text-primary fw-bold news-date">2025年6月30日</span>：
+            <span class="badge bg-secondary">海洋学部</span>
+            <span class="badge bg-info text-dark">在校生向け</span>
+            <span class="badge bg-success">受験生向け</span>
+          </div>
+          <div class="mt-2 ms-3">
+            オープンキャンパス開催決定！
+          </div>
+        </div>
+
+        <div class="mb-4 p-3 border rounded shadow-sm bg-light">
+          <div>
+            <span class="text-primary fw-bold news-date">2025年6月20日</span>：
+            <span class="badge bg-secondary">情報科学部</span>
+            <span class="badge bg-info text-dark">在校生向け</span>
+          </div>
+          <div class="mt-2 ms-3">
+            AI研究所の新設を発表しました。
+          </div>
+        </div>
+
+        <div class="mb-4 p-3 border rounded shadow-sm bg-light">
+          <div>
+            <span class="text-primary fw-bold news-date">2025年6月10日</span>：
+            <span class="badge bg-secondary">情報科学部</span>
+            <span class="badge bg-success">受験生向け</span>
+          </div>
+          <div class="mt-2 ms-3">
+            文部科学省より優秀学科として表彰されました。
+          </div>
+        </div>
+
+        <div class="d-block d-md-none text-center mt-4">
+          <a class="btn btn-outline-primary btn-md" href="https://www.google.com/" role="button">一覧をみる</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- introduction -->
+  <section class="container my-5">
+    <div class="row">
+      <!-- タイトル部分 -->
+      <div class="col-lg-3 col-md-3 mb-4 text-lg-start text-md-start text-center">
+        <h2 class="mb-2 text-darkblue news-title">About</h2>
+        <h6 class="text-darkblue news-subtitle">大学について</h6>
+      </div>
+
+      <!-- ニュース本体 -->
+      <div class="col-lg-9 col-md-9">
+        
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- カード表示エリア -->
+  <div class="container pt-4">
+    <div class="row">
+      <div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+        <div class="card mb-5 border-0 text-center">
+          <img class="card-img-top img-clipping-1" src="./img/seaside.jpeg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title text-primary">Card Component</h5>
+            <p class="card-text">同種のコンテンツを複数並べる場合、Bootstrapのcardが便利です。</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+        <div class="card mb-5 border-0 text-center">
+          <img class="card-img-top img-clipping-1" src="./img/food.jpeg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title text-primary">Card Component</h5>
+            <p class="card-text">同種のコンテンツを複数並べる場合、Bootstrapのcardが便利です。</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xm-12 col-sm-6 col-md-4 col-lg-2">
+        <div class="card mb-5 border-0 text-center">
+          <img class="card-img-top img-clipping-1" src="./img/coffee.jpeg" alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title text-primary">Card Component</h5>
+            <p class="card-text">同種のコンテンツを複数並べる場合、Bootstrapのcardが便利です。</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- フッター -->
+  <footer class="container">
+    <hr class="featurette-divider" />
+    <p class="p-1 float-end"><a href="#">トップに戻る</a></p>
+  </footer>
+
+  <!-- JavaScript（背景切り替え＆ナビバー透明制御） -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const navbar = document.querySelector('.navbar');
+      const mainVisual = document.getElementById('mainVisual');
+      const images = [
+        './img/main-visual.jpeg',
+        './img/seaside.jpeg',
+        './img/room.jpeg',
+        './img/food.jpeg'
+      ];
+      let current = 0;
+
+      function changeBackground() {
+        current = (current + 1) % images.length;
+        mainVisual.style.backgroundImage =
+          `linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(0, 255, 255, 0.4)), url(${images[current]})`;
+      }
+
+      // 初期背景
+      mainVisual.style.backgroundImage =
+        `linear-gradient(45deg, rgba(0, 0, 255, 0.5), rgba(0, 255, 255, 0.4)), url(${images[0]})`;
+
+      setInterval(changeBackground, 5000);
+
+      // ナビバーの透明度をスクロールで変更
+      function updateNavbar() {
+        if (window.scrollY < 550) {
+          navbar.classList.add('navbar-transparent');
+          navbar.classList.remove('navbar-dark-scrolled');
+        } else {
+          navbar.classList.remove('navbar-transparent');
+          navbar.classList.add('navbar-dark-scrolled');
+        }
+      }
+
+      updateNavbar();
+      window.addEventListener('scroll', updateNavbar);
+    });
+  </script>
+</body>
+
+</html>
